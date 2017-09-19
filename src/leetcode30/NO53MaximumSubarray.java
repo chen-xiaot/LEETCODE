@@ -1,0 +1,25 @@
+package leetcode30;
+
+public class NO53MaximumSubarray {
+
+	public int maxSubArray(int[] nums) {
+        int max = Integer.MIN_VALUE, sum = 0;
+        	
+        for (int i = 0; i < nums.length; i++) {
+        	if (sum < 0) 
+        		sum = nums[i];
+        	else 
+        		sum += nums[i];
+        
+        	if (sum > max)
+        		max = sum;
+    }
+    return max;
+}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
